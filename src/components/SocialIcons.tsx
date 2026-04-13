@@ -80,7 +80,7 @@ const SocialIcons = () => {
         className="resume-button"
         href="/Resume.pdf"
         target="_blank"
-        rel="noreferrer"
+        rel="noopener noreferrer"
       >
         <HoverLinks text="RESUME" />
         <span>
