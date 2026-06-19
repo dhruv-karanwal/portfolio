@@ -106,11 +106,12 @@ body {
 .techstack {
   width: 100%;
   position: relative;
-  overflow: clip;
-  height: var(--vh);
+  height: auto;
+  min-height: var(--vh);
   margin: auto;
   margin-top: 50px;
-  margin-bottom: -100px;
+  margin-bottom: 50px;
+  padding-bottom: 50px;
 }
 
 .techstack h2 {
@@ -124,6 +125,100 @@ body {
   text-transform: uppercase;
 }
 
+.tech-canvas {
+  height: 55vh !important;
+  width: 100%;
+}
+
+.techstack-written {
+  width: 90%;
+  max-width: 1200px;
+  margin: 20px auto;
+  position: relative;
+  z-index: 10;
+}
+
+.techstack-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 30px;
+}
+
+.tech-category-card {
+  background: rgba(255, 255, 255, 0.02);
+  border: 1px solid rgba(255, 255, 255, 0.05);
+  border-radius: 16px;
+  padding: 30px;
+  transition: all 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+  position: relative;
+  overflow: hidden;
+  backdrop-filter: blur(8px);
+}
+
+.tech-category-card::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 3px;
+  background: linear-gradient(90deg, transparent, var(--accentColor), transparent);
+  opacity: 0;
+  transition: opacity 0.4s ease;
+}
+
+.tech-category-card:hover {
+  transform: translateY(-5px);
+  background: rgba(255, 255, 255, 0.04);
+  border-color: rgba(94, 234, 212, 0.3);
+  box-shadow: 0 10px 30px -10px rgba(94, 234, 212, 0.15);
+}
+
+.tech-category-card:hover::before {
+  opacity: 1;
+}
+
+.tech-category-card h3 {
+  font-size: 22px;
+  font-weight: 500;
+  margin-top: 0;
+  margin-bottom: 12px;
+  color: #ffffff;
+}
+
+.tech-category-card p {
+  font-size: 15px;
+  line-height: 1.6;
+  font-weight: 300;
+  color: rgba(255, 255, 255, 0.7);
+  margin: 0;
+}
+
+.tech-tags-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin-top: 15px;
+}
+
+.tech-tag {
+  font-size: 14px;
+  font-weight: 400;
+  padding: 6px 12px;
+  background-color: rgba(255, 255, 255, 0.05);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 30px;
+  color: rgba(255, 255, 255, 0.85);
+  transition: all 0.3s ease;
+}
+
+.tech-tag:hover {
+  background-color: rgba(94, 234, 212, 0.1);
+  border-color: var(--accentColor);
+  color: #ffffff;
+  transform: translateY(-2px);
+}
+
 @media screen and (min-width: 768px) {
   body {
     --cWidth: 94%;
@@ -133,5 +228,19 @@ body {
 @media screen and (max-width: 900px) {
   .techstack h2 {
     font-size: 40px;
+  }
+  .tech-canvas {
+    height: 45vh !important;
+  }
+  .techstack-grid {
+    grid-template-columns: 1fr;
+    gap: 20px;
+  }
+  .tech-category-card {
+    padding: 20px;
+  }
+  .tech-tag {
+    font-size: 12px;
+    padding: 4px 10px;
   }
 }

@@ -15,26 +15,34 @@ const Career = () => {
           <div className="career-info-box">
             <div className="career-info-in">
               <div className="career-role">
-                <h4>Hackathon Winner</h4>
-                <h5>National Recognition</h5>
+                <h4>Aletrix</h4>
+                <h5>App &amp; Model Developer</h5>
               </div>
-              <h3>NOW</h3>
             </div>
             <p>
-              Won a National Hackathon for developing 'Sahyog', an AI-driven disaster relief platform.
+              Working as the App Developer and main Model Developer at Aletrix, a startup providing advanced AR (Augmented Reality) services.
             </p>
           </div>
           <div className="career-info-box">
             <div className="career-info-in">
               <div className="career-role">
-                <h4>Workshop Organizer</h4>
-                <h5>IEEE Student Branch</h5>
+                <h4>Bandhavgarh Safari</h4>
+                <h5>App Project Intern</h5>
               </div>
-              <h3>2025</h3>
             </div>
             <p>
-              Organized a multi-day technical workshop on LLMs for 200+ students.
-              Contributing to collaborative technical projects and development initiatives as a key team member.
+              Worked on the development of their roster booking app and backend development.
+            </p>
+          </div>
+          <div className="career-info-box">
+            <div className="career-info-in">
+              <div className="career-role">
+                <h4>IEEE VIT Pune Student Branch</h4>
+                <h5>Secretary</h5>
+              </div>
+            </div>
+            <p>
+              Currently serving as the Secretary for the IEEE Student Branch at VIT Pune, managing internal communications, organizing major technical events, and coordinating executive committee operations.
             </p>
           </div>
           <div className="career-info-box">
@@ -43,7 +51,6 @@ const Career = () => {
                 <h4>Department Representative</h4>
                 <h5>VIT Pune</h5>
               </div>
-              <h3>2024</h3>
             </div>
             <p>
               Elected as Department Representative, leading and coordinating 1000+ students

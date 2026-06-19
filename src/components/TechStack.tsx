@@ -207,6 +207,42 @@ const TechStack = () => {
           <N8AO color="#0f002c" aoRadius={2} intensity={1.15} />
         </EffectComposer>
       </Canvas>
+
+      <div className="techstack-written">
+        <div className="techstack-grid">
+          <div className="tech-category-card">
+            <h3>Languages &amp; Core</h3>
+            <div className="tech-tags-list">
+              <span className="tech-tag">Python</span>
+              <span className="tech-tag">C++</span>
+              <span className="tech-tag">TypeScript</span>
+              <span className="tech-tag">JavaScript</span>
+            </div>
+          </div>
+          <div className="tech-category-card">
+            <h3>Frameworks &amp; Mobile</h3>
+            <div className="tech-tags-list">
+              <span className="tech-tag">Flutter</span>
+              <span className="tech-tag">React.js</span>
+              <span className="tech-tag">Next.js</span>
+              <span className="tech-tag">Three.js</span>
+              <span className="tech-tag">GSAP</span>
+            </div>
+          </div>
+          <div className="tech-category-card">
+            <h3>Backend, Cloud &amp; Databases</h3>
+            <div className="tech-tags-list">
+              <span className="tech-tag">Firebase</span>
+              <span className="tech-tag">Node.js &amp; Express</span>
+              <span className="tech-tag">AWS</span>
+              <span className="tech-tag">TensorFlow</span>
+              <span className="tech-tag">MySQL</span>
+              <span className="tech-tag">MongoDB</span>
+              <span className="tech-tag">PostgreSQL</span>
+            </div>
+          </div>
+        </div>
+      </div>
     </div>
   );
 };

@@ -208,7 +208,7 @@
 .landing-info h3 {
   font-size: 22px;
   letter-spacing: 2px;
-  font-weight: 300;
+  font-weight: 600;
   color: var(--accentColor);
   margin: 0;
 }
@@ -234,7 +234,7 @@
 }
 
 h2.landing-info-h2 {
-  color: #14b8a6;
+  color: var(--accentColor);
   font-size: 42px;
   width: 120%;
   margin: 0;
@@ -260,6 +260,7 @@ h2.landing-info-h2 {
       rgba(0, 0, 0, 0) 110%);
   top: 0;
   left: 0;
+  opacity: 0.15;
 }
 
 @media screen and (min-width: 500px) {
@@ -340,12 +341,13 @@ h2.landing-info-h2 {
     left: auto;
     right: 66%;
     transform: translate(0%, -50%);
+    z-index: 15;
   }
 
   .landing-info {
     bottom: auto;
     top: 51%;
-    z-index: inherit;
+    z-index: 15;
     text-align: left;
     transform: translate(0%, -50%);
     right: auto;
@@ -359,12 +361,13 @@ h2.landing-info-h2 {
     left: auto;
     right: 70%;
     transform: translate(0%, -50%);
+    z-index: 15;
   }
 
   .landing-info {
     bottom: auto;
     top: 51%;
-    z-index: inherit;
+    z-index: 15;
     text-align: left;
     transform: translate(0%, -50%);
     right: auto;

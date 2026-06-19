@@ -5,6 +5,13 @@ import { MdArrowBack, MdArrowForward } from "react-icons/md";
 
 const projects = [
   {
+    title: "Aletrix",
+    category: "3D & AR Platform",
+    tools: "React, Three.js, GSAP, Tailwind CSS",
+    image: "/images/aeltrix.png",
+    link: "https://aeltrix-three.vercel.app",
+  },
+  {
     title: "Sahyog",
     category: "Disaster Relief Platform",
     tools: "Flutter, Python, AI/ML, Liquid Galaxy",
