@@ -16,18 +16,20 @@
   max-width: calc(100% - 15px);
 }
 .about-me h3 {
-  font-size: 25px;
+  font-size: 18px;
   text-transform: uppercase;
-  letter-spacing: 7px;
-  font-weight: 400;
+  letter-spacing: 5px;
+  font-weight: 500;
   color: var(--accentColor);
+  margin-bottom: 15px;
 }
 
 .about-me p {
-  font-size: 33px;
-  font-weight: 600;
-  line-height: 36px;
-  letter-spacing: 1px;
+  font-size: 18px;
+  font-weight: 500;
+  line-height: 26px;
+  letter-spacing: 0.5px;
+  color: rgba(255, 255, 255, 0.85);
 }
 
 @media only screen and (min-width: 600px) {
@@ -43,6 +45,16 @@
   }
   .about-section {
     opacity: 1;
+  }
+  .about-me h3 {
+    font-size: 25px;
+    letter-spacing: 7px;
+  }
+  .about-me p {
+    font-size: 26px;
+    font-weight: 600;
+    line-height: 32px;
+    letter-spacing: 1px;
   }
 }
 @media only screen and (min-width: 1025px) {
