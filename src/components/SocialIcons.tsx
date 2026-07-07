@@ -4,10 +4,13 @@ import {
 } from "react-icons/fa6";
 import "./styles/SocialIcons.css";
 import { TbNotes } from "react-icons/tb";
-import { useEffect } from "react";
+import { useEffect, useState } from "react";
 import HoverLinks from "./HoverLinks";
+import ResumeModal from "./ResumeModal";
 
 const SocialIcons = () => {
+  const [isModalOpen, setIsModalOpen] = useState(false);
+
   useEffect(() => {
     const social = document.getElementById("social") as HTMLElement;
 
@@ -54,40 +57,51 @@ const SocialIcons = () => {
     });
   }, []);
 
+  const handleResumeClick = (e: React.MouseEvent<HTMLAnchorElement>) => {
+    if (window.innerWidth < 768) {
+      e.preventDefault();
+      setIsModalOpen(true);
+    }
+  };
+
   return (
-    <div className="icons-section">
-      <div className="social-icons" data-cursor="icons" id="social">
-        <span>
-          <a
-            href="https://github.com/dhruvkaranwal"
-            target="_blank"
-            rel="noreferrer"
-          >
-            <FaGithub />
-          </a>
-        </span>
-        <span>
-          <a
-            href="https://www.linkedin.com/in/dhruv-karanwal"
-            target="_blank"
-            rel="noreferrer"
-          >
-            <FaLinkedinIn />
-          </a>
-        </span>
+    <>
+      <div className="icons-section">
+        <div className="social-icons" data-cursor="icons" id="social">
+          <span>
+            <a
+              href="https://github.com/dhruvkaranwal"
+              target="_blank"
+              rel="noreferrer"
+            >
+              <FaGithub />
+            </a>
+          </span>
+          <span>
+            <a
+              href="https://www.linkedin.com/in/dhruv-karanwal"
+              target="_blank"
+              rel="noreferrer"
+            >
+              <FaLinkedinIn />
+            </a>
+          </span>
+        </div>
+        <a
+          className="resume-button"
+          href="/Resume.pdf"
+          target="_blank"
+          rel="noopener noreferrer"
+          onClick={handleResumeClick}
+        >
+          <HoverLinks text="RESUME" />
+          <span>
+            <TbNotes />
+          </span>
+        </a>
       </div>
-      <a
-        className="resume-button"
-        href="/Resume.pdf"
-        target="_blank"
-        rel="noopener noreferrer"
-      >
-        <HoverLinks text="RESUME" />
-        <span>
-          <TbNotes />
-        </span>
-      </a>
-    </div>
+      <ResumeModal isOpen={isModalOpen} onClose={() => setIsModalOpen(false)} />
+    </>
   );
 };
 

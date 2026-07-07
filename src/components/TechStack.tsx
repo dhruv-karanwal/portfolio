@@ -226,7 +226,6 @@ const TechStack = () => {
               <span className="tech-tag">React.js</span>
               <span className="tech-tag">Next.js</span>
               <span className="tech-tag">Three.js</span>
-              <span className="tech-tag">GSAP</span>
             </div>
           </div>
           <div className="tech-category-card">
